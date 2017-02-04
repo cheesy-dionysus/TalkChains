@@ -71,8 +71,8 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 
  	<script type="text/javascript">
      function loginCheck(){
-        var jFirst = document.getElementById("fname").value;
-        var jLast = document.getElementById("lname").value;
+        var user = document.getElementById("user").value;
+        var pass = document.getElementById("pass").value;
         alert("Your name is: " + jFirst + " " + jLast);
      }
      </script>
@@ -81,15 +81,13 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 
 <body>
   <div class="login">
-	<h1>Login</h1>
-    <form name="login" onSubmit="javascript:loginCheck" method="POST">
-    	<input type="text" name="u" placeholder="Username" required="required" />
-        <input type="password" name="p" placeholder="Password" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+	<h1>Fuck this shit</h1>
+    <form name="login" onSubmit="javascript:loginCheck()">
+    	<input type="text" id="user" name="u" placeholder="Username" required="required" />
+        <input type="password" id="pass" name="p" placeholder="Password" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Work bitch</button>
     </form>
 </div>
-  
-    <script src="js/index.js"></script>
 
 </body>
 </html>

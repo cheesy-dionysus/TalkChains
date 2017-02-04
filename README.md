@@ -22,6 +22,12 @@ Then, in another command line:
 $ embark run
 ```
 
+To run server in command line:
+
+```Bash
+$ make server
+```
+
 # NOTE
 
 There are some compatibility issues with node versions less than 4.0.0. Try to upgrade Node to the latest version and uninstall any old one to not create a conflict.
