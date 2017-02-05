@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///Users/Sidhant/Downloads/bootstrap-3.3.7-dist/signin.htm -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script data-x-lastpass="">(function(){var c=0;if("undefined"!==typeof CustomEvent&&"function"===typeof window.dispatchEvent){var a=function(a){try{if("object"===typeof a&&(a=JSON.stringify(a)),"string"===typeof a)return window.dispatchEvent(new CustomEvent("lprequeststart",{detail:{data:a,requestID:++c}})),c}catch(f){}},b=function(a){try{window.dispatchEvent(new CustomEvent("lprequestend",{detail:a}))}catch(f){}};"undefined"!==typeof XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.send&&(XMLHttpRequest.prototype.send=
+function(c){return function(f){var d=this,e=a(f);e&&d.addEventListener("loadend",function(){b({requestID:e,statusCode:d.status})});return c.apply(d,arguments)}}(XMLHttpRequest.prototype.send));"function"===typeof fetch&&(fetch=function(c){return function(f,d){var e=a(d),g=c.apply(this,arguments);if(e){var h=function(a){b({requestID:e,statusCode:a&&a.status})};g.then(h)["catch"](h)}return g}}(fetch))}})();
+(function(){if("undefined"!==typeof CustomEvent){var c=function(a){if(a.lpsubmit)return a;var b=function(){try{this.dispatchEvent(new CustomEvent("lpsubmit"))}catch(k){}return a.apply(this,arguments)};b.lpsubmit=!0;return b};window.addEventListener("DOMContentLoaded",function(){if(document&&document.forms&&0<document.forms.length)for(var a=0;a<document.forms.length;++a)document.forms[a].submit=c(document.forms[a].submit)},!0);document.createElement=function(a){return function(){var b=a.apply(this,
+arguments);b&&"FORM"===b.nodeName&&b.submit&&(b.submit=c(b.submit));return b}}(document.createElement)}})();
+</script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./index_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example').DataTable( {
+                "scrollY": 200,
+                "scrollX": true
+            });
+        });
+    </script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+        <table class="display nowrap">
+            <script src="d3.min.js"></script>
+            <script type="text/javascript"charset="utf-8">
+            d3.text("form.csv", function(data) {
+                var parsedCSV = d3.csv.parseRows(data);
+
+                var container = d3.select("body")
+
+                    .selectAll("tr")
+                        .data(parsedCSV).enter()
+                        .append("tr")
+
+                    .selectAll("td")
+                        .data(function(d) { return d; }).enter()
+                        .append("td")
+                        .text(function(d) { return d; });
+                });
+            </script>
+        </table>
+
+    </div> <!-- /container -->
+
+
+  
+
+<script aria-hidden="true" type="application/x-lastpass" id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{(function() { for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof(lastpass_f.lpsubmitorig2)=='object'){ continue;}lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i.toString(); } else { d.textContent=i.toString(); } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }})()}catch(e){}</script>
+
+
+</body>
+
+</html>
