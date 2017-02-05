@@ -1,6 +1,6 @@
 pragma solidity ^0.4.7;
 
-contract userRecord { 
+contract userContract { 
 
 	struct record {
 		uint256 rec; 	//the hash
@@ -9,12 +9,12 @@ contract userRecord {
 		int userID;		//User ID
 	}
 	record myrecord;
-	event upload(address _from, uint256 _rec, string _link); 
+	event upload(address _from, uint256 _rec, int h_id, int u_id); 
 
  	
 	//Create events uploadRecord
-	function uploadRecords(uint256 r, string l) { 
-		upload(msg.sender, r, l); 
+	function uploadRecords(uint256 r, int h_id, int u_id) { 
+		upload(msg.sender, r, h_id, u_id); 
 	}
 
 	
@@ -25,7 +25,7 @@ contract userRecord {
 	
 
 	//gives back the link for the database	
-	function getLink() constant returns (string) { 
-		return myrecord.link; 
-	}	
+	//function getLink() constant returns (string) { 
+	//	return myrecord.link; 
+	//}	
 }	

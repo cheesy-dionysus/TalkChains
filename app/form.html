@@ -42,27 +42,31 @@ arguments);b&&"FORM"===b.nodeName&&b.submit&&(b.submit=c(b.submit));return b}}(d
       <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Message Hash</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="text" class="hash form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Hospital ID</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="text" class="hid form-control" id="exampleInputPassword1" placeholder="">
   </div>
    <div class="form-group">
     <label for="exampleInputPassword1">User ID</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="text" class="uid form-control" id="exampleInputPassword1" placeholder="">
   </div>
   
     
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="set btn btn-primary">Submit</button>
 </form>
       </form>
 
     </div> <!-- /container -->
-
+    <div class="log">
+      <p>Calls made to blockchain</p>
+    </div>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./index_files/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/form.js"></script>
   
 
 <script aria-hidden="true" type="application/x-lastpass" id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{(function() { for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof(lastpass_f.lpsubmitorig2)=='object'){ continue;}lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i.toString(); } else { d.textContent=i.toString(); } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }})()}catch(e){}</script></body></html>
