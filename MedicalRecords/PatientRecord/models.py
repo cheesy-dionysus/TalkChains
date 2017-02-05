@@ -23,7 +23,7 @@ class PatientVisit(models.Model):
     '''
     Class details the results of a patient visit
     '''
-    patient_id = models.CharField(max_length=40)
+    patient = models.CharField(max_length=40)
 
     admission_id = models.IntegerField()
 
