@@ -39,22 +39,22 @@ arguments);b&&"FORM"===b.nodeName&&b.submit&&(b.submit=c(b.submit));return b}}(d
 
     <div class="container">
 
-      <form>
+      <form action="form/tables.html">
   <div class="form-group">
-    <label for="exampleInputEmail1">Message Hash</label>
-    <input type="text" class="hash form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+    <label for="message">Message Hash</label>
+    <input type="text" class="hash form-control" id="message" aria-describedby="emailHelp" placeholder="">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Hospital ID</label>
-    <input type="text" class="hid form-control" id="exampleInputPassword1" placeholder="">
+    <label for="hospitalid">Hospital ID</label>
+    <input type="text" class="hid form-control" id="hospitalid" placeholder="">
   </div>
    <div class="form-group">
-    <label for="exampleInputPassword1">User ID</label>
-    <input type="text" class="uid form-control" id="exampleInputPassword1" placeholder="">
+    <label for="userid">User ID</label>
+    <input type="text" class="uid form-control" id="userid" placeholder="">
   </div>
   
     
-  <button type="submit" class="set btn btn-primary">Submit</button>
+  <button type="submit" onclick="addentry([message,hospitalid,userid], 1)" class="set btn btn-primary">Submit</button>
 </form>
       </form>
 
@@ -69,4 +69,17 @@ arguments);b&&"FORM"===b.nodeName&&b.submit&&(b.submit=c(b.submit));return b}}(d
     <script src="js/form.js"></script>
   
 
-<script aria-hidden="true" type="application/x-lastpass" id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{(function() { for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof(lastpass_f.lpsubmitorig2)=='object'){ continue;}lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i.toString(); } else { d.textContent=i.toString(); } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }})()}catch(e){}</script></body></html>
+<script aria-hidden="true" type="application/x-lastpass" id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{(function() { for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof(lastpass_f.lpsubmitorig2)=='object'){ continue;}lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i.toString(); } else { d.textContent=i.toString(); } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }})()}catch(e){}</script>
+
+<script type="text/javascript">
+  function addentry(arr) {
+    data.forEach(function (arr, index) {
+        var line = arr.join(",");
+        arr.push(index == 0 ? "data:text/csv;charset=utf-8," + line : line);
+    });
+    var csvContent = arr.join("\n");
+  } ;
+</script>
+
+</body></html>
+
