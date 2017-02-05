@@ -1,1 +1,20 @@
-{}
+{
+  "0xcbaa026243d6245b4dbd304b1ccda25bf9a2ae4a5ed5ebcea3f8269a0710ee23": {
+    "name": "development",
+    "contracts": {
+      "0xf8f05ae0f2d5311c4f3c288009a364d1706f3afa57354f5ce425138124c927fc": {
+        "address": "0x7c7299eacedb37b07dbe506d64fcb66c6af0eb2a",
+        "name":    "userRecord"
+      }
+    }
+  },
+  "0xd7ac012a191ee7b5dde2da19d481eb54715d59d33c9008b69d6da3b58f09899e": {
+    "name": "development",
+    "contracts": {
+      "0xf8f05ae0f2d5311c4f3c288009a364d1706f3afa57354f5ce425138124c927fc": {
+        "address": "0x35f4012caf202637670a44ea6cfda8125cf53bce",
+        "name":    "userRecord"
+      }
+    }
+  }
+}
