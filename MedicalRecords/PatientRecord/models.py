@@ -3,77 +3,33 @@ from django.utils.translation import ugettext as _
 
 
 class Patient(models.Model):
-	'''
-        Information on a patient
-	'''
+    '''
+    Information on a patient
+    '''
+    patient_id = models.CharField(max_length=40)
 
-	first_name = models.CharField(
-        _('First Name'),
-        max_length=255,
-        blank=False,
-        help_text=_('First Name of the patient (including middle name)'))
+    gender = models.CharField(max_length=40)
 
-	last_name = models.CharField(
-        _('Last Name'),
-        max_length=255,
-        blank=True,
-        help_text=_('Last name of the patient'))
+    date_of_birth = models.DateTimeField('Date of Birth')
 
-	birth_date = models.DateField(
-		_('Date of Birth'),
-		blank=False,
-		null=True,
-		help_text=_('Patient Date of birth'))
+    patient_race = models.CharField(max_length=40)
 
-	full_address = models.CharField(
-        _('First Address'),
-        max_length=255,
-        blank=False,
-        help_text=_('Full Address of the patient'))
+    patient_language = models.CharField(max_length=40)
 
-	city = models.CharField(
-        _('City'),
-        max_length=255,
-        blank=False,
-        help_text=_('City of the patient'))
+    # def __str__(self):
+    #     return "Patient " + str(patient_id)
 
-	province = models.CharField(
-        _('Province of residence'),
-        max_length=255,
-        blank=False,
-        help_text=_('Province where the patient resides'))
+class PatientVisit(models.Model):
+    '''
+    Class details the results of a patient visit
+    '''
+    patient_id = models.CharField(max_length=40)
 
-	mobile_no = models.CharField(
-        _('Mobile No'),
-        max_length=10,
-        blank=False,
-        help_text=_('Mobile No of the patient'))
+    admission_id = models.IntegerField()
 
-	landline_no = models.CharField(
-        _('Landline No'),
-        max_length=255,
-        blank=True,
-        help_text=_('Landline no of the patient'))
+    admission_start_date = models.DateTimeField('Date patient entered medical facility')
 
-	email = models.EmailField(
-		_('Email ID'),
-		max_length=70,
-		blank=True,
-		null=True,
-		help_text=_('Email ID of the patient'),)
+    admission_end_date = models.DateTimeField('Date patient left medical facility')
 
-	referred_by = models.CharField(
-        _('Reffered By'),
-        max_length=255,
-        blank=True,
-        help_text=_('Name of the Doctor who referred the patient, if applicable'))
-
-	patient_since = models.DateTimeField(
-        _("Date of patient's first visit"),
-        help_text=_('When did the patient first visit the hospital'))
-
-        # TODO
-	def __str__(self):
-		return
-
-class PatientVisit
+    # def __str__(self):
+    #     return "Patient " + str(patient_id) + " visit on " + str(admission_start_date)
