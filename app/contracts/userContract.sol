@@ -5,9 +5,11 @@ contract userRecord {
 		uint256 rec; 
 		string link; 
 	}
-	record myrecord; 
+	record myrecord;
+	event upload(address _from, uint256 _rec, string _link); 
+ 
 	function uploadRecords(uint256 r, string l) { 
-		myrecord = record(r, l);
+		upload(msg.sender, r, l); 
 	}
 	
 	function getHash() constant returns (uint256) {
