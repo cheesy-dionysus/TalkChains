@@ -1,22 +1,24 @@
 # OpenHealth
 
-A decentralized app that connects patients record from different hospitals in a secure chain database. where no one has the authority to manipulate or change any record. It also gives easy access to the doctors from different hospitals to access the patients' records with their premission
+OpenHealth is a a decentralized application that connects patient records stored at different hospitals, allowing patients to securely transfer their medical records between health professionals.  It uses blockchain technology to control access to hospitals' databases, so that no one can manipulate or change any records without leaving an trail behind. 
 
 
 # Installation
+
+To install, first install the embark framework (stop at the Usage - Demo title in the embark README)
 
 https://github.com/iurimatias/embark-framework#installation
 
 
 # Run 
 
-Run a REAL etherum node for development puproses 
+Run a REAL etherum node for development purposes:
 
 ```Bash
 $ embark blockchain
 ```
 
-Then, in another command line:
+Then, in another terminal window, run:
 
 ```Bash
 $ embark run
@@ -30,4 +32,4 @@ $ make server
 
 # NOTE
 
-There are some compatibility issues with node versions less than 4.0.0. Try to upgrade Node to the latest version and uninstall any old one to not create a conflict.
+Users can run into some compatibility issues if they are using node version 4.0.0 or lower. Upgrade Node to the latest version and uninstall any old versions to avoid conflicts.
